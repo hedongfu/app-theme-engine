@@ -5,7 +5,6 @@ import android.os.Build;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.EdgeEffectCompat;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.RecyclerView;
 import android.widget.AbsListView;
@@ -82,15 +81,15 @@ public class EdgeGlowUtil {
                 Field edgeGlowBottom = NestedScrollView.class.getDeclaredField("mEdgeGlowBottom");
                 edgeGlowBottom.setAccessible(true);
 
-                EdgeEffectCompat ee = (EdgeEffectCompat) edgeGlowTop.get(scrollView);
+                EdgeEffect ee = (EdgeEffect) edgeGlowTop.get(scrollView);
                 if (ee == null) {
-                    ee = new EdgeEffectCompat(scrollView.getContext());
+                    ee = new EdgeEffect(scrollView.getContext());
                     edgeGlowTop.set(scrollView, ee);
                 }
                 setEdgeGlowColor(ee, color);
-                ee = (EdgeEffectCompat) edgeGlowBottom.get(scrollView);
+                ee = (EdgeEffect) edgeGlowBottom.get(scrollView);
                 if (ee == null) {
-                    ee = new EdgeEffectCompat(scrollView.getContext());
+                    ee = new EdgeEffect(scrollView.getContext());
                     edgeGlowBottom.set(scrollView, ee);
                 }
                 setEdgeGlowColor(ee, color);
@@ -125,30 +124,30 @@ public class EdgeGlowUtil {
                 Field bottomGlow = RecyclerView.class.getDeclaredField("mBottomGlow");
                 bottomGlow.setAccessible(true);
 
-                EdgeEffectCompat ee = (EdgeEffectCompat) topGlow.get(recyclerView);
+                EdgeEffect ee = (EdgeEffect) topGlow.get(recyclerView);
                 if (ee == null) {
-                    ee = new EdgeEffectCompat(recyclerView.getContext());
+                    ee = new EdgeEffect(recyclerView.getContext());
                     topGlow.set(recyclerView, ee);
                 }
                 setEdgeGlowColor(ee, color);
 
-                ee = (EdgeEffectCompat) bottomGlow.get(recyclerView);
+                ee = (EdgeEffect) bottomGlow.get(recyclerView);
                 if (ee == null) {
-                    ee = new EdgeEffectCompat(recyclerView.getContext());
+                    ee = new EdgeEffect(recyclerView.getContext());
                     bottomGlow.set(recyclerView, ee);
                 }
                 setEdgeGlowColor(ee, color);
 
-                ee = (EdgeEffectCompat) rightGlow.get(recyclerView);
+                ee = (EdgeEffect) rightGlow.get(recyclerView);
                 if (ee == null) {
-                    ee = new EdgeEffectCompat(recyclerView.getContext());
+                    ee = new EdgeEffect(recyclerView.getContext());
                     rightGlow.set(recyclerView, ee);
                 }
                 setEdgeGlowColor(ee, color);
 
-                ee = (EdgeEffectCompat) leftGlow.get(recyclerView);
+                ee = (EdgeEffect) leftGlow.get(recyclerView);
                 if (ee == null) {
-                    ee = new EdgeEffectCompat(recyclerView.getContext());
+                    ee = new EdgeEffect(recyclerView.getContext());
                     leftGlow.set(recyclerView, ee);
                 }
                 setEdgeGlowColor(ee, color);
@@ -159,8 +158,8 @@ public class EdgeGlowUtil {
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    private static void setEdgeGlowColor(@NonNull EdgeEffectCompat edgeEffect, @ColorInt int color) throws Exception {
-        Field field = EdgeEffectCompat.class.getDeclaredField("mEdgeEffect");
+    private static void setEdgeGlowColor(@NonNull EdgeEffect edgeEffect, @ColorInt int color) throws Exception {
+        Field field = EdgeEffect.class.getDeclaredField("mEdgeEffect");
         field.setAccessible(true);
         EdgeEffect effect = (EdgeEffect) field.get(edgeEffect);
         if (effect != null)
