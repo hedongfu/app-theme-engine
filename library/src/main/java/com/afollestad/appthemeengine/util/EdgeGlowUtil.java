@@ -159,10 +159,13 @@ public class EdgeGlowUtil {
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private static void setEdgeGlowColor(@NonNull EdgeEffect edgeEffect, @ColorInt int color) throws Exception {
-        Field field = EdgeEffect.class.getDeclaredField("mEdgeEffect");
-        field.setAccessible(true);
-        EdgeEffect effect = (EdgeEffect) field.get(edgeEffect);
-        if (effect != null)
-            effect.setColor(color);
+        try {
+            Field field = EdgeEffect.class.getDeclaredField("mEdgeEffect");
+            field.setAccessible(true);
+            EdgeEffect effect = (EdgeEffect) field.get(edgeEffect);
+            if (effect != null)
+                effect.setColor(color);
+        } catch (final Exception | NoClassDefFoundError ignored) {
+        }
     }
 }
