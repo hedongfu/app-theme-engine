@@ -2,7 +2,7 @@ package com.afollestad.appthemeengine.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v7.widget.SwitchCompat;
+import androidx.appcompat.widget.SwitchCompat;
 import android.util.AttributeSet;
 
 import com.afollestad.appthemeengine.ATE;

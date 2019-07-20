@@ -6,17 +6,19 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.support.annotation.AttrRes;
-import android.support.annotation.CheckResult;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.IntDef;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StyleRes;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.AttrRes;
+import androidx.annotation.CheckResult;
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.IntDef;
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StyleRes;
+import androidx.core.content.ContextCompat;
 import android.view.View;
+
+import androidx.fragment.app.Fragment;
 
 import com.afollestad.appthemeengine.customizers.ATENavigationBarCustomizer;
 import com.afollestad.appthemeengine.customizers.ATEStatusBarCustomizer;
@@ -360,7 +362,7 @@ public final class Config extends ConfigBase {
     }
 
     @Override
-    public void apply(@NonNull android.support.v4.app.Fragment fragment) {
+    public void apply(@NonNull Fragment fragment) {
         commit();
         ATE.apply(fragment, mKey);
     }

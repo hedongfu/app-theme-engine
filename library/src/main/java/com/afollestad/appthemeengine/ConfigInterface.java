@@ -1,14 +1,16 @@
 package com.afollestad.appthemeengine;
 
 import android.app.Activity;
-import android.support.annotation.AttrRes;
-import android.support.annotation.CheckResult;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.annotation.StyleRes;
+import androidx.annotation.AttrRes;
+import androidx.annotation.CheckResult;
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
+import androidx.annotation.StyleRes;
 import android.view.View;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * @author Aidan Follestad (afollestad)
@@ -145,7 +147,7 @@ interface ConfigInterface {
 
     void apply(@NonNull Activity activity);
 
-    void apply(@NonNull android.support.v4.app.Fragment fragment);
+    void apply(@NonNull Fragment fragment);
 
     void apply(@NonNull android.app.Fragment fragment);
 

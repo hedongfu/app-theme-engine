@@ -1,9 +1,9 @@
 package com.afollestad.appthemeengine;
 
 import android.app.Activity;
-import android.support.v7.view.menu.MenuBuilder;
-import android.support.v7.view.menu.MenuPresenter;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.appcompat.view.menu.MenuPresenter;
+import androidx.appcompat.widget.Toolbar;
 
 /**
  * @author Aidan Follestad (afollestad)

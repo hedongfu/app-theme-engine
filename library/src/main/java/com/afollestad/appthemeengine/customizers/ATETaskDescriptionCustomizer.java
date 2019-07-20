@@ -1,8 +1,8 @@
 package com.afollestad.appthemeengine.customizers;
 
 import android.graphics.Bitmap;
-import android.support.annotation.ColorInt;
-import android.support.annotation.Nullable;
+import androidx.annotation.ColorInt;
+import androidx.annotation.Nullable;
 
 /**
  * @author Aidan Follestad (afollestad)

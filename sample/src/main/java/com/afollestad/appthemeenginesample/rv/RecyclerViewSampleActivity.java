@@ -2,9 +2,9 @@ package com.afollestad.appthemeenginesample.rv;
 
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.StyleRes;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.StyleRes;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.MenuItem;
 
 import com.afollestad.appthemeengine.customizers.ATEActivityThemeCustomizer;

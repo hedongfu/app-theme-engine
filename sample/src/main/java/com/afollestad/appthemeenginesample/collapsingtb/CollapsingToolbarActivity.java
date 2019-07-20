@@ -1,9 +1,9 @@
 package com.afollestad.appthemeenginesample.collapsingtb;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.Nullable;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 
 import com.afollestad.appthemeenginesample.R;

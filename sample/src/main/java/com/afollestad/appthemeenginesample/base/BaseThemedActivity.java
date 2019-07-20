@@ -1,7 +1,7 @@
 package com.afollestad.appthemeenginesample.base;
 
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.afollestad.appthemeengine.ATEActivity;
 
